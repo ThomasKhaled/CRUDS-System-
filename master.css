@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #222;
+    font-family: system-ui;
+}
+
+header {
+    text-align: center;
+    color: white;
+    margin: .5rem 0;
+}
+
+header p {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+.cruds {
+    width: 80%;
+    margin: auto;
+    
+}
+
+input {
+    width: 100%;
+    height: 2.8rem;
+    border: 0;
+    outline: 0;
+    margin: .3rem 0;
+    padding: .5rem;
+    color: white;
+    background-color: #111;
+    border-radius: .4rem;
+}
+
+@keyframes scaleInput {
+    0%{
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+input:focus {
+    animation: scaleInput .5s forwards;
+}
+
+@keyframes scaleoutInput {
+    0%{
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+input:not(:focus) {
+    animation: scaleoutInput .5s forwards;
+}
+
+input::placeholder {
+    text-transform: capitalize;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price input:nth-child(n+2) {
+    margin-left: .5rem;
+}
+
+.price small {
+    display: flex;
+    align-self: center;
+    color: white;
+    background-color: #990505;
+    margin-left: .5rem;
+    font-size: 1.7rem;
+}
+
+.price small::before {
+    content: 'Total: ';
+    margin-left: .5rem;
+}
+
+.inputs #create{
+    background: #39004f;
+    border-radius: .4rem;
+    text-transform: uppercase;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.inputs #create:hover {
+    letter-spacing: .1rem;
+    background: #2a013a;
+}
+
+.search-type {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    margin: .3rem 0;
+}
+
+button {
+    background: #39004f;
+    border-radius: .4rem;
+    text-transform: capitalize;
+    transition: .5s;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    color: white;
+    width: 100%;
+    height: 2.8rem;
+}
+
+button:hover {
+    letter-spacing: .1rem;
+    background: #2a013a;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+tr th {
+    color: white;
+    text-transform: uppercase; 
+}
+
+tbody tr {
+    text-transform: capitalize;
+    color: rgb(185, 182, 182);
+}
+
+
+tbody button {
+    width: 80%;
+    height: 2rem;
+}
